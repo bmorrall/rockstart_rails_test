@@ -34,6 +34,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'brakeman', require: false
   gem 'listen', '~> 3.3'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
@@ -51,6 +52,8 @@ group :development do
 end
 
 group :test do
+  # Use Shoulda for rspec
+  gem 'shoulda-matchers', '~> 5.0'
   # Use simplecov for code coverage reports
   gem 'simplecov', require: false
 end
